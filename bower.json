@@ -1,10 +1,9 @@
 {
-  "name": "middleman",
+  "name": "cameroneditions",
   "version": "0.0.0",
+  "private": "true",
   "dependencies": {
-    "jquery": "~2.0",
     "normalize-scss": "~2.1",
-    "modernizr": "~2.6.2",
-    "foundation": "~5.0.2"
+    "foundation": "zurb/bower-foundation"
   }
 }
