@@ -1,3 +1,5 @@
+require 'closure-compiler'
+
 ###
 # Compass
 ###
@@ -52,6 +54,15 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+# foundation patch per http://wanderwort.de/2013/04/11/using-zurb-foundation-with-middleman/
+
+bourbon_path = Gem::Specification.find_by_name('bourbon').gem_dir
+sprockets.append_path File.join(root, 'components')
+set :sass_assets_paths, [File.join(root, 'components/foundation/scss'), File.join(bourbon_path, 'app/assets/stylesheets')]
+
+# pretty urls, as directories
+activate :directory_indexes
+
 # Build-specific configuration
 configure :build do
   ignore 'images/*.psd'
@@ -65,15 +76,18 @@ configure :build do
 
   # Minify Javascript on build
   activate :minify_javascript
+  
+  # uncomment below to activate colosure compiler, causing issues with clearing
+  set :js_compressor, ::Closure::Compiler.new
 
   # Create favicon/touch icon set from source/favicon_base.png
-  activate :favicon_maker
+  # activate :favicon_maker
   
   # Enable cache buster
   # activate :cache_buster
 
   # Use relative URLs
-  # activate :relative_assets
+  activate :relative_assets
 
   # Compress PNGs after build
   # First: gem install middleman-smusher
