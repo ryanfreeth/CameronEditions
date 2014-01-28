@@ -6,3 +6,13 @@
 
 @import "../../components/normalize-scss/_normalize.scss";
 
+.container {
+	width:1024px;
+	position:relative;
+	margin:0 auto;
+	padding-bottom:10px;
+  padding-left:20px;
+  padding-top:200px;
+	text-align:left;
+	overflow:hidden;
+}

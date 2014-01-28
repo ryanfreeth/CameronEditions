@@ -3,38 +3,62 @@ title: Cameron Editions
 body_class: gallery
 images:
   - filename: aubergine-landscape-2730.jpg
+    alt: "Aubergine Landscape 2730"
   - filename: cosmic-clouds-2896.jpg
+    alt: "Cosmic Clouds 2896"
   - filename: cosmic-landscape-2898.jpg
+    alt: "Cosmic Landscape 2896"
   - filename: cosmic-landscape-2907.jpg
+    alt: "Cosmic Landscape 2907"
   - filename: cosmic-landscape-2916.jpg
+    alt: "Cosmic Landscape 2916"
   - filename: cosmic-landscape-2925.jpg
+    alt: "Cosmic Landscape 2925"
   - filename: cosmic-landscape-2926.jpg
+    alt: "Cosmic Landscape 2926"
   - filename: cosmic-nightfall.jpg
+    alt: "Cosmic Nightfall"
   - filename: inflow-2.jpg
+    alt: "Inflow 2"
   - filename: inflow-3.jpg
+    alt: "Inflow 3"
   - filename: inflow-5.jpg
+    alt: "Inflow 5"
   - filename: light-landscape-2652.jpg
+    alt: "Light Landscape 2652"
   - filename: light-landscape-2662.jpg
+    alt: "Light Landscape 2662"
   - filename: light-landscape-2679.jpg
+    alt: "Light Landscape 2679"
   - filename: light-landscape-2994.jpg
+    alt: "Light Landscape 2994"
   - filename: lightfall-3032.jpg
+    alt: "Lightfall 3032"
   - filename: lightfall-3041.jpg
+    alt: "Lightfall 3041"
   - filename: lightfall-3496.jpg
+    alt: "Lightfall 3496"
   - filename: lightfall-golden-3003.jpg
+    alt: "Lightfall Golden 3003"
   - filename: lightfall-rays-2772.jpg
+    alt: "Lightfall Rays 2772"
   - filename: lightpool-3315.jpg
+    alt: "Lightpool 3315"
   - filename: tidal-light-a.jpg
+    alt: "Tidal Light A"
   - filename: tidal-light-b.jpg
+    alt: "Tidal Light B"
 ---
 .container
   .ad-gallery#gallery
     .ad-image-wrapper
-    .ad-controls
+    / .ad-controls
+    #descriptions
     .ad-nav
       .ad-thumbs
         %ul.ad-thumb-list
           - current_page.data.images.each_with_index do |image, index|
             %li
               %a{href: "/images/light-landscapes/#{image.filename}"}
-                %img{src: "/images/thumbs/light-landscapes/#{image.filename}", class: "image#{index}"}
+                %img{src: "/images/thumbs/light-landscapes/#{image.filename}", class: "image#{index}", alt: "#{image.alt}"}
   
