@@ -31,3 +31,4 @@
 
 $(document).foundation()
 
+galleries = $(".ad-gallery").adGallery()

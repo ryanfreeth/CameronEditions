@@ -1,0 +1,922 @@
+/*---------- Copyright Michael Levin 2004/2013 - Photographer
+						 Site Revised March 3, 2013 --*/
+/*---------- Site Designer - Robin Bonner 
+						 http://www.robinbonner.com ----*/
+/*---------- Site Developer - Devan Burnett
+						 http://www.devanalexanderburnett.com ----*/
+
+/*---------- Page Reset --------*/
+
+html, body {
+	height:100%;
+}
+html, body, fieldset, form, label, legend, h1, h2, h3, h4, p, img {
+	margin: 0;
+	padding: 0;
+	outline:none;
+	border:0;
+}
+ul, ol, li {
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+a {
+	text-decoration:none;
+	outline:none;
+}
+a:link {
+	color: #f63;
+}
+a:visited {
+	color: #930;
+}
+a:hover {
+	color: #ccc;
+}
+a:active {
+	color: #F00;
+}
+
+/*---------- General Page Style Setting ----------*/
+@font-face {
+	font-family: Jose;
+	src: url(assets/Jose.ttf) format("truetype");
+}
+body {
+	font:normal 12px/18px Arial, Helvetica, sans-serif;
+	color:#222;
+	background:#fff;
+	text-align:center;
+}
+#floater {
+	position:relative; float:left;
+	height:50%;	margin-bottom:-375px;
+	width:1px;
+}
+#texasHoldem {
+	clear:left;
+	width:960px;
+	height:600px;
+	position:relative;
+	margin:0 auto;
+}
+#container {
+	width:960px;
+	position:relative;
+	margin:0 auto;
+	padding-bottom:10px;
+	text-align:left;
+	overflow:hidden;
+}
+/*#images .images, */
+#colour #mainNav ul li.colour-work a,
+#bw #mainNav ul li.nav-shift a,
+#books li.books a, 
+#representation li.representation a,
+#about li.about a,
+#cv li.cv a,
+#videos li.videos a,
+#news li.news a,
+#workshops li.workshops a {
+	color: #B3B3B3;
+	cursor: text;
+}
+/*--- Header Styles ---*/
+#header {
+	width:960px;
+	height:50px;
+	background:#fff;
+	position:relative;
+}
+h1 {
+	font:100 26px/23px  "Gill Sans", jose, "Gill Sans MT", GillSans, Calibri, "Trebuchet MS", sans-serif;
+	margin:0 auto;
+	padding:0;
+	border:0;
+	outline:none;
+	text-transform:uppercase;
+	color:#333;
+	letter-spacing:5px;
+	word-spacing:5px;
+}
+h1 a, a:visited, a:hover {
+	color:#000;
+}
+h1 a:active {
+	color: #F00;
+}
+#logo {
+	position:relative;
+	width:250px;
+	margin:0;
+	top:28px;
+}
+#hidden {
+	position:absolute;
+	width:250px;
+	height:20px;
+	left: 0;
+	top: 0;
+	overflow:hidden;
+}
+#hidden em { 
+	position:absolute;
+	width:250px;
+	height:22px;
+	margin:0;
+}
+#hidden em {
+	cursor:pointer;
+	left:0;
+	top:0;
+	outline: none;
+} 
+#hidden img {
+	margin:0;
+	padding:0;
+	background:#fff;
+}
+h2 {
+	font: 300 14px/16px "Gill Sans", jose, "Gill Sans MT", GillSans, Calibri, "Trebuchet MS", Sawasdee, “URW Gothic L”, Umpush, sans-serif;
+	text-transform:uppercase;
+	color:#FF6633;
+	margin-bottom:5px;
+}
+#navIcon{
+	position:absolute;
+	top:35px;
+	right:0;
+}
+#mainNav {
+	width:600px;
+	height:20px;
+	position:absolute;
+	top:34px;
+	right:20px;
+	background:#fff;
+  	text-align:right;
+	
+}
+#mainNav li {
+	display:inline;
+	height:18px;
+	background:#fff;
+	padding-top:5px;
+	position:relative;
+}
+#mainNav a {
+	font: 300 13px/18px "Gill Sans", "Gill Sans MT", GillSans, Calibri, "Trebuchet MS", Sawasdee, “URW Gothic L”, Umpush, sans-serif;
+	text-transform:uppercase;
+	color:#000;
+	padding:10px 5px 5px;
+	letter-spacing:1px;
+}
+#mainNav a:hover {
+	color:#999;	
+}
+#mainNav a:active {
+	color:#FF6633;
+}
+
+#mainNav ul {
+	display: none;
+	}
+#mainNav li:hover > ul {
+	display: block;
+	background: #fff;
+	}
+#mainNav ul:after {
+	content: ""; clear: both; display: block;
+	}
+#mainNav ul {
+	position: absolute;
+	width:275px;
+	top:120%;
+	left:-70px;
+	z-index:99999;
+	overflow:hidden;
+	text-align: left;
+	}
+#mainNav ul li {
+	width:50%;
+	overflow:hidden;
+}
+#mainNav ul li a {
+	display: inline-block;
+	widht:50%;
+	color: #000;
+	text-decoration: none;
+	padding-top:0;
+	padding-right:15px;
+	}	
+#mainNav ul .nav-shift {
+	text-align: right;
+	padding-left: 15px;
+	border-left:1px solid #ccc;
+}
+#mainNav ul li a:hover {
+	color:#999;
+	}
+#mainNav ul li a:active {
+	color:#FF6633;
+}
+
+.mainPage {
+	margin:100px 0 0 50px;
+}
+/* -------------  Book Page -----*/
+
+#bookInfo {
+	margin-top:100px;
+	float:left;
+	width:350px;
+}
+#bookInfo h2 {
+	margin-bottom:8px;
+	letter-spacing:1px;
+}
+#bookInfo p {
+	color:#888;
+	font: 12px/22px Arial, Helvetica, sans-serif;
+	text-align:justify;
+	letter-spacing:normal;
+}
+#bookThumbs {
+	width:550px;
+	float:right;
+	margin-top:100px;
+	overflow:hidden;
+	letter-spacing:1px;
+	position:relative;
+}
+#bookThumbs h3 {
+	font:300 12px/16px "Gill Sans", jose, "Gill Sans MT", GillSans, Calibri, "Trebuchet MS", Sawasdee, “URW Gothic L”, Umpush, sans-serif;
+  text-transform:uppercase;
+	margin-top:5px;
+}
+#bookThumbs p {
+	font:lighter 11px/14px "Gill Sans", jose, "Gill Sans MT", GillSans, Calibri, "Trebuchet MS", Sawasdee, “URW Gothic L”, Umpush, sans-serif;
+	color:#999;
+}
+#collectorED, #tradeED, #deluxeED {
+	width:256px;
+	height:230px;
+	float:right;
+	margin-left:10px;
+	margin-bottom:10px;
+}
+#bookThumbs img {
+	margin:0;
+	padding:0;
+}
+#bookThumbs a {
+	display:block;
+	border:1px solid #ccc;
+	margin:0;
+	padding:0;
+	width:254px;
+	height:190px;
+}
+#bookThumbs a:hover {
+	border:1px solid #ff6633;
+}
+#buyED {
+	width:256px;
+	height:190px;
+	text-align:center;
+	float:right;
+	margin-left:10px;
+}
+#buyNow {
+	width:85px;
+	height:65px;
+	margin:61px auto 0;
+	background:#f63;
+}
+#bookThumbs a:hover #buyNow {
+	background:#ff4406;
+}
+#buyNow p {
+	color:#fff;
+	font:bold 14px/16px Arial, Helvetica, sans-serif;
+	padding-top:16px;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	text-shadow: #b22e01 1px 0 0;
+}
+
+/*--------------------- Representation Page Styles--*/
+#RepHolder {
+	margin-top:100px;
+	width:960px;
+	height:375px;
+	position:relative;
+	background: #fff url('../assets/RepMap.gif') no-repeat top left;
+}
+#RepList {
+	float:left;
+	width:330px;
+	color:888;
+	overflow:visible;
+	font: 100 12px/11px Arial, Helvetica, sans-serif;
+}
+#RepList li {
+	margin-bottom:5px;
+}
+#RepList a {
+	color:#999;
+	display:block;
+	padding-bottom:10px;
+}
+#RepList a:hover {
+	color:#ff6633;
+}
+.marcia img, .june img, .kevin img, .lando img, .whistlerOne img, .luz img, .photographers img, .thornwoodDallas img, .thornwoodHouston img, .photoEye img, .mayence img, .samuel img, .weiss img, .whistlerTwo img {
+	visibility:hidden;
+}
+.marcia:hover img, .june:hover img, .kevin:hover img, .lando:hover img, .whistlerOne:hover img, .luz:hover img, .photographers:hover img, .thornwoodDallas:hover img, .thornwoodHouston:hover img, .photoEye:hover img, .mayence:hover img, .samuel:hover img, .weiss:hover img, .whistlerTwo:hover img {
+	visibility: visible;
+	position:absolute;
+}
+.marcia:hover img {
+	top:144px;
+	left:486px;
+}
+.june:hover img {
+	top:158px;
+	left:495px;
+}
+.kevin:hover img {
+	top:152px;
+	left:502px;
+}
+.lando:hover img {
+	top:122px;
+	left:431px;
+}
+.whistlerOne:hover img {
+	top:127px;
+	left:408px;
+}
+.luz:hover img {
+	top:136px;
+	left:407px;
+}
+.photographers:hover img {
+	top:172px;
+	left:406px;
+}
+.thornwoodDallas:hover img {
+	top:172px;
+	left:448px;
+}
+.thornwoodHouston:hover img {
+	top:180px;
+	left:450px;
+}
+.photoEye:hover img {
+	top:164px;
+	left:435px;
+}
+.mayence:hover img {
+	top:147px;
+	left:633px;
+}
+.samuel:hover img {
+	top:144px;
+	left:630px;
+}
+.weiss:hover img {
+	top:133px;
+	left:430px;
+}
+.whistlerTwo:hover img {
+	top:130px;
+	left:412px;
+}
+.RepContact {
+	width:620px;
+	color:#999;
+  margin:15px 0 0;
+	text-align:center;
+	float:right;
+}
+.RepContact p {
+	font: 100 12px/11px Arial, Helvetica, sans-serif;
+	margin-bottom:15px;
+}
+.RepContact a {
+	color:#ff6633;
+}
+.RepContact a:hover {
+	color:#bbb;
+}
+.em {
+	color:#888;
+}
+/*-----------About Page Styles------*/
+
+#aboutInfo {
+	width:360px;
+	height:500px;
+	overflow:auto;
+	float:left;
+	clear:both;
+	margin-top:100px;
+}
+#aboutInfo h2 {
+	margin-bottom:8px;
+	letter-spacing:1px;
+}
+#aboutInfo h2 span {
+	display:block;
+	text-transform:none;
+}
+#aboutInfo p {
+	color:#999;
+	line-height:18px;
+	margin-right:15px;
+	margin-bottom:10px;
+	text-align:justify;
+}
+.aboutML {
+	position:relative;
+	float:right;
+	margin-top:100px;
+	width:520px;
+	height:500px;
+	padding:0;
+	font-size:10px;
+	color:#888;
+	text-align:right;
+	text-transform:uppercase;
+}
+video {
+	border:0;
+	outline:n;
+}
+#vidFallback {
+	width:520px;
+	height:293px;
+	background:#fff url("../assets/CratesBg.jpg") top left no-repeat;
+}
+
+/*----------------------------- CV Page Styles -------------*/
+
+#cvScreen{
+	position:relative;
+	height:500px;
+	width:960px;
+	margin-top:100px;
+}
+#cvNav{
+	width:250px;
+	float:left;
+}
+#cvNav ul{
+	text-align:right;
+}
+#cvNav li{
+	padding-bottom:3px;
+}
+#cvNav a{
+	font: 300 14px/16px "Gill Sans", jose, "Gill Sans MT", GillSans, Calibri, "Trebuchet MS", Sawasdee, “URW Gothic L”, Umpush, sans-serif;
+	text-transform:uppercase;
+	color:#FF6633;
+}
+#cvNav a:hover {
+	color:#999;
+}
+#cvHolder {
+	width:467px;
+	height:500px;
+	float:right;
+}
+.scroll-pane {
+	width: 467px;
+	height: 500px;
+	overflow: auto;
+}
+#cvContent ul li p {
+	font: lighter 13px/14px arial, sans-serif;
+	color:#f63;
+	margin:0 0 2px 0;
+}
+#cvContent ul li ul {
+	margin-bottom:15px;
+}
+#cvContent ul li ul li {
+	color:#888;
+	line-height:15px;
+}
+#cvNav li a.navActive  {
+	color:#B3B3B3;
+}
+/*------------------------------- Video Page ------------*/
+#videoLinks {
+	margin-top:100px;
+}
+#videoLtwo {
+	margin-top: 50px;
+	clear:both;
+}
+.vid {
+	width:312px;
+	float:left;
+	margin-right:10px;
+}
+.lastVid {
+	margin-right:0;
+}
+.vid h2 {
+	margin:10px 0 0 1px;
+	letter-spacing:1px;
+}
+.vid p {
+	margin:0 2px 0 1px;
+	color:#999;
+	line-height:18px;
+	margin-bottom:20px;
+	text-align:justify;
+}
+.vid a img {
+	border:1px solid #000;
+}
+.vid a:hover img {
+	border:1px solid #f63;
+}
+.videoBox {
+	margin-top:25px;
+	height:auto;
+	overflow:hidden;
+}
+.videoBox h2 {
+	text-align:left;
+	margin-top:5px;
+  margin-left:20px;
+}
+.videoBox p {
+	color:#888;
+	line-height:18px;
+	margin:10px 20px;
+	text-align:justify;
+}
+#vidNoScroll {
+	height:100%;
+	overflow:hidden;
+}
+/*------------------------------- Blog Page ----------------*/
+
+#blogContainer {
+  margin-top:100px;
+  width:650px;
+  height:500px;
+  overflow:auto;
+  float:right;
+  border-left:2px solid #ddd;
+	outline:none;
+}
+#blogContainer a {
+	color: #fe7e37;
+}
+#blogContainer a:hover {
+	color: #ccc;
+}
+.blogPost {
+  width:580px;
+  margin:1px 0 30px 40px;
+  padding-bottom:10px;
+  border-bottom:1px solid #999;
+}
+.blogPost h2 {
+  color:#222;
+  margin-bottom:10px;
+  letter-spacing:1px;
+}
+.blogPost h2 span {
+  color:#f63;
+  font-size:12px;
+  display:block;
+  font-family:arial, helvetica, sans-serif;
+  font-size:11px;
+}
+.rightImg {
+	width: 247px;
+	float:right;
+	margin-left:20px;
+}
+.rss {
+	margin-top:7px;
+  float:right;
+}
+.center {
+	text-align:center;
+}
+p#title {
+	float:left;
+	font: 300 11px/17px "Gill Sans", jose, "Gill Sans MT", GillSans, Calibri, "Trebuchet MS", Sawasdee, “URW Gothic L”, Umpush, sans-serif;
+	text-transform:uppercase;
+	color:#FF6633;
+	padding:0;
+	margin:0 0 10px;
+	letter-spacing:1px;
+}
+a.blogZoom {
+	display:inline-block;
+	float:right;
+	width:12px;
+	height:12px;
+	background: url(../assets/zoom.png) 0 0 no-repeat;
+}
+a:hover.blogZoom {
+	background-position: 0 -12px;
+}
+
+.blogPost p {
+	color:#999;
+	line-height:18px;
+	margin-bottom:20px;
+	text-align:justify;
+}
+#sideBar {
+	margin-top:100px;
+	width:280px;
+}
+.sideNote {
+	width:280px;
+}
+.sideNote h3 {
+  font: 300 14px/18px "Gill Sans", jose, "Gill Sans MT", GillSans, Calibri, "Trebuchet MS", Sawasdee, “URW Gothic L”, Umpush, sans-serif;
+  color:#222;
+  margin-bottom:10px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+.sideNote h3 span {
+	display:block;
+	color:#f63;
+  font-size:11px;
+  font-family:arial, helvetica, sans-serif;
+}
+.sideNote h3 b {
+	font-weight:100;
+	text-transform:none;
+	}
+.sideNote img {
+	margin:5px 0 15px;
+}
+.sideNote p {
+	color:#999;
+	line-height:18px;
+	margin-right:15px;
+	margin-bottom:10px;
+	text-align:justify;
+}
+
+.sideNote a {
+	color: #fe7e37;
+}
+.sideNote a:hover {
+	color: #ccc;
+}
+a.sideLink {
+	text-transform:uppercase;
+	color:#f63;
+	letter-spacing:1px;
+	font-size:11px;
+	font-family: "Gill Sans", jose, "Gill Sans MT", GillSans, Calibri, "Trebuchet MS", Sawasdee, “URW Gothic L”, Umpush, sans-serif;
+}
+#snapShot {
+	width:508px;
+	height:267px;
+	overflow:hidden;
+	text-align:center;
+	margin:0 35px 20px;
+}
+#snapShot ul {
+	margin:0 auto 10px;
+}
+#snapShot ul li img {
+	margin:auto;
+}
+/*------------------- Workshop Page ----------*/
+
+/*----- SINGLE PAGE PLACECARD--------------*/
+#japan_ws {
+	margin-top:100px;
+	margin-bottom:20px;
+	}
+.regLink {
+	width:75px;
+	clear:both;
+	text-align:center;
+	border:1px solid #cf060d;
+}
+.regLink a {
+	font:normal 10px/16px "gill sans", jose, arial, sans-serif;
+	display:block;
+	background:#bc2121;
+	color:#fff;
+	padding:5px 10px;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	text-shadow: #a70e14 1px 1px 0;
+	-webkit-transition: background 0.4s ease;
+  	-moz-transition: background 0.4s ease;
+  	-o-transition: background 0.4s ease;
+ 	 transition: background 0.4s ease;
+}
+.regLink a:hover {
+	background:#fe421c;
+}
+
+/*---------Normal Workshop Settings------------*/
+#workshops h3 {
+	color:#f63;
+  font: lighter 11px/14px Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	margin-bottom:10px;
+}
+#workshop {
+	width:380px;
+	height:500px;
+	overflow:auto;
+	float:left;
+	margin-top:100px;
+	margin-bottom:20px;
+}
+#workshop h2 {
+	font: lighter 14px/19px "Gill Sans", jose, "Gill Sans MT", GillSans, Calibri, "Trebuchet MS", Sawasdee, “URW Gothic L”, Umpush, sans-serif;
+  color:#222;
+  margin-bottom:10px;
+  letter-spacing:1px;
+	text-transform:uppercase;
+}
+#workshop span {
+	display:block;
+	color:#f63;
+  font-size:11px;
+  font-family:arial, helvetica, sans-serif;
+}
+.quote {
+	font-style:oblique;
+	padding-right:15px;
+	margin-left:10px;
+	padding-bottom:4px;
+}
+#workshop p {
+	color:#999;
+	line-height:18px;
+	margin-right:15px;
+	margin-bottom:10px;
+	text-align:justify;
+}
+#workShopInfo {
+	width:505px;
+	position: relative;
+	margin-top:100px;
+	float:right;
+	overflow:hidden;
+}
+#workShopInfo a {
+	text-transform:uppercase;
+	font-size:10px;
+	letter-spacing:1px;
+}
+#workShopInfo a:visited {
+	color:#fe926e;
+}
+#workShopInfo a:hover {
+	color:#bbb;
+}
+.workShopTestis {
+	width:250px;
+	float:right;
+	overflow:hidden;
+}
+.Tquote {
+	color:#999;
+	font: oblique 11px/17px arial, Verdana, Geneva, sans-serif;
+	text-align:justify;
+	margin-bottom:5px;
+}	
+.attr {
+	font: normal 10px/14px Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	margin-bottom:18px;
+	color:#999;
+}
+.workShopDates {
+	width:220px;
+	float:left;
+	overflow:hidden;
+}
+.workShopDates ul {
+	margin-bottom:20px;
+}
+.workShopDates ul li {
+	color:#999;
+	line-height:15px;
+	margin-bottom:9px;
+  font-size:11px;
+	letter-spacing:1px;
+}
+.workShopDates ul li span {
+	text-transform:uppercase;
+	display:block;
+	letter-spacing:2px;
+	font-size:10px;
+}
+.workShopDates ul li em {
+	font-style:normal;
+	color:#f63;
+}
+.workShopDates ul li a {
+	line-height:25px;
+	}
+#wsImg {
+  clear:both;
+	width:505px;
+	height:170px;
+	padding-top:42px;
+}
+
+
+
+/*------------------- Splash Page ----------*/
+.splash {
+	margin-bottom:55px;
+}
+#portal {
+	width:960px;
+	height:480px;
+	overflow:hidden;
+	background:url(../assets/Lost-In-Japan-Splash.jpg) 0 0 no-repeat;
+	}
+#fill {
+	width:960px;
+	height:480px;
+	overflow:hidden;
+	background:url(../assets/fill.gif) 0 0 no-repeat;
+	}
+#enter {
+	width:480px;
+	height:480px;
+	float: left;
+	overflow:hidden;
+	margin:0;
+	padding:0;
+}
+#newWork {
+	width:480px;
+	height:480px;
+	float:left;
+	overflow:hidden;
+	margin:0;
+	padding:0;
+}
+
+
+/*------------------- New Colour Work Text ------------*/
+
+#ColourWork {
+	text-align:justify;
+	padding:65px;
+	}
+#ColourWork h2 {
+	color:#000;
+	margin-top:60px;
+	margin-bottom:25px;
+	}
+#ColourWork p {
+	color:#888;
+	line-height:20px;
+	margin-bottom:25px;
+	
+	}
+.NewWorkLeft {
+	width:380px;
+	float:left;
+	}
+.NewWorkRight {
+	width:380px;
+	float:right;
+	}
+.by {
+	margin-top:30px;
+	}
+/*------------------- 404 Page ----------*/
+
+.missing {
+	margin-top:100px;
+	margin-left:250px;
+	width:350px;
+	}
+.missing h2 {
+	}
+.missing p {
+	margin:10px 0 10px 0;
+	}

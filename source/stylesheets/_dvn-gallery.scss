@@ -1,0 +1,242 @@
+body {
+	padding:0;
+	margin:0;
+	width:100%;
+	height:100%;
+	text-align:center;
+  }
+img {
+	border:0;
+	outline:none;
+}
+.dvn-gallery {
+	margin:0 auto;
+  width: 960px;
+}
+.dvn-gallery, .dvn-gallery * {
+  margin: 5px 0 0;
+  padding: 0;
+}
+  .dvn-gallery .dvn-image-wrapper {
+    width: 100%;
+    height: 550px;
+    position: relative;
+  }
+    .dvn-gallery .dvn-image-wrapper .dvn-loader {
+      position: absolute;
+      z-index: 10;
+      top: 48%;
+      left: 48%;
+      border: 1px solid #fff;
+    }
+    .dvn-gallery .dvn-image-wrapper .dvn-next {
+      position: absolute;
+      right: 0;
+      top: 500px;
+      cursor: pointer;
+      display: block;
+      z-index: 100;
+    }
+    .dvn-gallery .dvn-image-wrapper .dvn-prev {
+      position: absolute;
+      right: 16px;
+      top: 500px;
+      cursor: pointer;
+      display: block;
+      z-index: 100;
+    }
+		
+      .dvn-gallery .dvn-image-wrapper .dvn-prev a.dvn-prev-image {
+        background: url(../assets/backArrow.png) 0 0 no-repeat;
+				display:block;
+        width: 12px;
+        height: 12px;
+      }
+			.dvn-gallery .dvn-image-wrapper .dvn-prev a:hover.dvn-prev-image {
+				background-position: 0 -12px;
+			}
+      .dvn-gallery .dvn-image-wrapper .dvn-next a.dvn-next-image {
+        background: url(../assets/forewardArrow.png) 0 0 no-repeat;
+				display:block;
+        width: 12px;
+        height: 12px;
+      }
+			.dvn-gallery .dvn-image-wrapper .dvn-next a:hover.dvn-next-image {
+				background-position: 0 -12px;
+			}
+			a.thumbShow {
+			position: absolute;
+      right: 0;
+      top: 583px;
+      cursor: pointer;
+      display: block;
+      z-index:900;
+			background: url(../assets/thumbShow.png) no-repeat 0 0;
+      width: 12px;
+      height: 12px;
+			}
+		a:hover.thumbShow {
+      background-position: 0 -12px;
+      }
+				
+    .dvn-gallery .dvn-image-wrapper .dvn-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 99;
+    }
+      .dvn-gallery .dvn-image-wrapper .dvn-image a img {
+        border: 0;
+      }
+      
+ 
+    .dvn-gallery .dvn-info {
+      float: left;
+    }
+  .dvn-gallery .dvn-nav {
+    width: 100%;
+    position: relative;
+  }
+    .dvn-gallery .dvn-forward, .dvn-gallery .dvn-back {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      z-index: 10;
+    }
+    /* IE 6 doesn't like height: 100% */
+    * html .dvn-gallery .dvn-forward, .dvn-gallery .dvn-back {
+      height: 100px;
+    }
+   .dvn-gallery .dvn-back {
+      cursor: pointer;
+      left: -20px;
+      width: 13px;
+      display: block;
+      background: url(../assets/dvn_scroll_back.png) 0 22px no-repeat;
+    }
+    .dvn-gallery .dvn-forward {
+      cursor: pointer;
+      display: block;
+      right: -20px;
+      width: 13px;
+			z-index:10;
+      background: url(../assets/dvn_scroll_forward.png) 0 22px no-repeat;
+    }
+    .dvn-gallery .dvn-nav .dvn-thumbs {
+			margin-top:-12px;
+      overflow: hidden;
+      width: 100%;
+    }
+      .dvn-gallery .dvn-thumbs .dvn-thumb-list {
+        float: left;
+        width: 9000px;
+        list-style: none;
+      }
+        .dvn-gallery .dvn-thumbs li {
+          float: left;
+          padding-right: 5px;
+        }
+          .dvn-gallery .dvn-thumbs li a {
+            display: block;
+          }
+            .dvn-gallery .dvn-thumbs li a img {
+              border: none;
+              display: block;
+            }
+            .dvn-gallery .dvn-thumbs li a.dvn-active img {
+              border: none;
+            }
+/* Can't do display none, since Opera won't load the images then */
+.dvn-preloads {
+  position: absolute;
+  left: -9000px;
+  top: -9000px;
+}
+
+  #gallery {
+		background: #fff;
+		text-align:left;
+  }
+  #descriptions {
+    position: relative;
+    height: 50px;
+    margin-top: -50px;
+    width: 210px;
+    padding: 0;
+    overflow: hidden;
+		z-index:999;
+  }
+#descriptions .dvn-image-description {
+  position: absolute;
+	font:300 13px/13px jose, "gill sans", arial, helvetica, Sawasdee, “URW Gothic L”, Umpush, sans-serif;
+	letter-spacing:1px;
+}
+#descriptions .dvn-description-title {
+		display:block;
+		font:100 13px/13px "gill sans", jose, arial, helvetica, Sawasdee, “URW Gothic L”, Umpush, sans-serif;
+		text-transform:uppercase;
+		color:#000;
+		margin-bottom:5px;
+}
+#year {
+	margin-left:2px;
+	color:#999;
+	font:100 14px/10px "gill sans", arial, helvetica, Sawasdee, “URW Gothic L”, Umpush, sans-serif;
+}
+#descriptions a {
+	border:0;
+	outline:none;
+}
+a.video {
+	position:absolute;
+	width:12px;
+	height:12px;
+	background: url(../assets/video.png) 0 0 no-repeat;
+}
+a:hover.video {
+	background-position: 0 -12px;
+}
+a.zoomOne {
+	position:absolute;
+	width:12px;
+	height:12px;
+	background: url(../assets/zoom.png) 0 0 no-repeat;
+}
+a:hover.zoomOne {
+	background-position: 0 -12px;
+}
+a.zoomTwo {
+	position:absolute;
+	left:17px;
+	width:12px;
+	height:12px;
+	background: url(../assets/zoom.png) 0 0 no-repeat;
+}
+a:hover.zoomTwo {
+	background-position: 0 -12px;
+}
+a.out {
+	position:absolute;
+	left:17px;
+	width:12px;
+	height:12px;
+	background: url(../assets/outtakes.png) 0 0 no-repeat;
+}
+a:hover.out {
+	background-position: 0 -12px;
+}
+a.info {
+	position:absolute;
+	left:17px;
+	width:12px;
+	height:12px;
+	background: url(../assets/info.png) 0 0 no-repeat;
+	}
+a:hover.info {
+	background-position: 0 -12px;
+	}
+#descriptions .dvn-image-description #korean {
+	font-family: batang, garamond, verdana;
+	font-size:1.1em;
+	letter-spacing:2px;
+	}
