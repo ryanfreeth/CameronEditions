@@ -33,22 +33,19 @@
     
     -# Stylesheets
     %link{href: "http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300,400", rel: "stylesheet", type: "text/css"}
-    %link{href: "http://yui.yahooapis.com/pure/0.3.0/pure-min.css", rel: "stylesheet"}/
     = stylesheet_link_tag 'application'
   %body{class: current_page.data.body_class || 'page'}
-    .container
-      = partial "nav"
-      = yield
-      -# Javascripts
-      = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js'
-      = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'
-      = javascript_include_tag '//yui.yahooapis.com/3.14.1/build/yui/yui-min.js'
-      = javascript_include_tag 'application'
+    = partial "nav"
+    = yield
+    -# Javascripts
+    = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js'
+    = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'
+    = javascript_include_tag 'application'
 
-      - if build?
-        -# Google Analytics
-        :javascript
-          var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-          (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-          g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-          s.parentNode.insertBefore(g,s)}(document,'script'));
+    - if build?
+      -# Google Analytics
+      :javascript
+        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));

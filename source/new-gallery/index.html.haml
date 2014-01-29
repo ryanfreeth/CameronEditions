@@ -1,6 +1,7 @@
 ---
 title: Cameron Editions
 body_class: gallery
+gallery_name: "Light Landscapes"
 images:
   - filename: aubergine-landscape-2730.jpg
     alt: "Aubergine Landscape 2730"
@@ -49,15 +50,17 @@ images:
   - filename: tidal-light-b.jpg
     alt: "Tidal Light B"
 ---
-.ad-gallery#gallery
-  .ad-image-wrapper
-  / .ad-controls
-  #descriptions
-  .ad-nav
-    .ad-thumbs
-      %ul.ad-thumb-list
-        - current_page.data.images.each_with_index do |image, index|
-          %li
-            %a{href: "/images/light-landscapes/#{image.filename}"}
-              %img{src: "/images/thumbs/light-landscapes/#{image.filename}", class: "image#{index}", alt: "#{image.alt}"}
+.row
+  .small-12
+    .ad-gallery#gallery
+      .ad-image-wrapper
+      / .ad-controls
+      #descriptions
+      .ad-nav
+        .ad-thumbs
+          %ul.ad-thumb-list
+            - current_page.data.images.each_with_index do |image, index|
+              %li
+                %a{href: "/images/light-landscapes/#{image.filename}"}
+                  %img{src: "/images/thumbs/light-landscapes/#{image.filename}", class: "image#{index}", alt: "#{current_page.data.gallery_name} : #{image.alt}"}
   
