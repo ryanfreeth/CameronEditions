@@ -6,13 +6,25 @@
 
 @import "../../components/normalize-scss/_normalize.scss";
 
+body {
+  font-family: 'Alegreya Sans SC', sans-serif;
+	color:#222;
+	background:#fff;
+}
+
 .container {
 	width:1024px;
 	position:relative;
 	margin:0 auto;
 	padding-bottom:10px;
   padding-left:20px;
-  padding-top:200px;
+  padding-top:20px;
 	text-align:left;
 	overflow:hidden;
 }
+
+#descriptions {
+  text-align: left;
+  font-weight: 300;
+}
+

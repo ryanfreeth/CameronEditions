@@ -27,3 +27,14 @@ galleries[0].addAnimation "no_desc", (img_container, direction, desc) ->
   galleries[0].animations["slide-hori"].apply this, [ img_container, direction, desc ]
 
 galleries[0].settings.effect = "no_desc"
+
+# YUI(classNamePrefix: "pure").use "gallery-sm-menu", (Y) ->
+#   horizontalMenu = new Y.Menu(
+#     container: "#nav"
+#     sourceNode: "#menu-items"
+#     orientation: "horizontal"
+#     hideOnOutsideClick: false
+#     hideOnClick: false
+#   )
+#   horizontalMenu.render()
+#   horizontalMenu.show()

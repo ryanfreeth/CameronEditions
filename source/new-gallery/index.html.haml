@@ -49,16 +49,15 @@ images:
   - filename: tidal-light-b.jpg
     alt: "Tidal Light B"
 ---
-.container
-  .ad-gallery#gallery
-    .ad-image-wrapper
-    / .ad-controls
-    #descriptions
-    .ad-nav
-      .ad-thumbs
-        %ul.ad-thumb-list
-          - current_page.data.images.each_with_index do |image, index|
-            %li
-              %a{href: "/images/light-landscapes/#{image.filename}"}
-                %img{src: "/images/thumbs/light-landscapes/#{image.filename}", class: "image#{index}", alt: "#{image.alt}"}
+.ad-gallery#gallery
+  .ad-image-wrapper
+  / .ad-controls
+  #descriptions
+  .ad-nav
+    .ad-thumbs
+      %ul.ad-thumb-list
+        - current_page.data.images.each_with_index do |image, index|
+          %li
+            %a{href: "/images/light-landscapes/#{image.filename}"}
+              %img{src: "/images/thumbs/light-landscapes/#{image.filename}", class: "image#{index}", alt: "#{image.alt}"}
   
