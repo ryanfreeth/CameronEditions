@@ -34,12 +34,14 @@ galleries = $(".ad-gallery").adGallery(
   start_at_index: 0
   update_window_hash: false
   description_wrapper: $("#descriptions")
+  animation_speed: 400
+  effect: 'fade'
 )
 
 galleries[0].addAnimation "no_desc", (img_container, direction, desc) ->
   if @current_description
     @current_description.remove()
     @current_description = `undefined`
-  galleries[0].animations["slide-hori"].apply this, [ img_container, direction, desc ]
+  galleries[0].animations["fade"].apply this, [ img_container, direction, desc ]
 
 galleries[0].settings.effect = "no_desc"
