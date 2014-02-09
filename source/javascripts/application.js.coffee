@@ -11,11 +11,12 @@
 # GO AFTER THE REQUIRES BELOW.
 #
 #= require foundation/js/foundation
-#= require foundation/js/foundation/foundation.abide
+# require foundation/js/foundation/foundation.abide
 # require foundation/js/foundation/foundation.accordion
 # require foundation/js/foundation/foundation.alert
-#= require foundation/js/foundation/foundation.clearing
+# require foundation/js/foundation/foundation.clearing
 # require foundation/js/foundation/foundation.dropdown
+#= require foundation/js/foundation/foundation.equalizer
 # require foundation/js/foundation/foundation.interchange
 # require foundation/js/foundation/foundation.joyride
 # require foundation/js/foundation/foundation.magellan

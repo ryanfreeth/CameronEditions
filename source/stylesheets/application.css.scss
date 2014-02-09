@@ -5,7 +5,7 @@
 
 // @import "foundation/components/accordion";
 // @import "foundation/components/alert-boxes";
-// @import "foundation/components/block-grid";
+ @import "foundation/components/block-grid";
 // @import "foundation/components/breadcrumbs";
 //@import "foundation/components/button-groups";
 //@import "foundation/components/buttons";
@@ -56,4 +56,17 @@
   font-family: 'Alegreya Sans SC';
   text-align: left;
   font-weight: 300;
+}
+
+.gallery-list > .row {
+  padding-bottom: 20px;
+}
+
+.about-copy {
+  display: inline-block;
+  
+}
+
+.about-copy > span {
+  vertical-align:middle;
 }

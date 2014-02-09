@@ -1,0 +1,32 @@
+---
+title: Cameron Editions
+body_class: gallery
+gallery_name: "Still Trees"
+gallery_path: "still-trees"
+images:
+  - filename: still-trees-32.jpg
+    alt: "Still Trees 32"
+  - filename: still-trees-33.jpg
+    alt: "Still Trees 33"
+  - filename: still-trees-39.jpg
+    alt: "Still Trees 39"
+  - filename: still-trees-47.jpg
+    alt: "Still Trees 47"
+  - filename: still-trees-51.jpg
+    alt: "Still Trees 51"
+  - filename: still-trees-53.jpg
+    alt: "Still Trees 53"
+---
+.row
+  .small-12
+    .ad-gallery#gallery
+      .ad-image-wrapper
+      / .ad-controls
+      #descriptions
+      .ad-nav
+        .ad-thumbs
+          %ul.ad-thumb-list
+            - current_page.data.images.each_with_index do |image, index|
+              %li
+                %a{href: "/images/#{current_page.data.gallery_path}/#{image.filename}"}
+                  %img{src: "/images/thumbs/#{current_page.data.gallery_path}/#{image.filename}", class: "image#{index}", alt: "#{current_page.data.gallery_name} : #{image.alt}"}

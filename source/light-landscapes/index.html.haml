@@ -2,6 +2,7 @@
 title: Cameron Editions
 body_class: gallery
 gallery_name: "Light Landscapes"
+gallery_path: "light-landscapes"
 images:
   - filename: aubergine-landscape-2730.jpg
     alt: "Aubergine Landscape 2730"
@@ -61,6 +62,6 @@ images:
           %ul.ad-thumb-list
             - current_page.data.images.each_with_index do |image, index|
               %li
-                %a{href: "/images/light-landscapes/#{image.filename}"}
-                  %img{src: "/images/thumbs/light-landscapes/#{image.filename}", class: "image#{index}", alt: "#{current_page.data.gallery_name} : #{image.alt}"}
+                %a{href: "/images/#{current_page.data.gallery_path}/#{image.filename}"}
+                  %img{src: "/images/thumbs/#{current_page.data.gallery_path}/#{image.filename}", class: "image#{index}", alt: "#{current_page.data.gallery_name} : #{image.alt}"}
   

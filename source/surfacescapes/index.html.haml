@@ -1,0 +1,54 @@
+---
+title: Cameron Editions
+body_class: gallery
+gallery_name: "Surfacescapes"
+gallery_path: "surfacescapes"
+images:
+  - filename: nightscape-1123.jpg
+    alt: "Nightscape 1123"
+  - filename: nightscape-1128.jpg
+    alt: "Nightscape 1128"
+  - filename: nightscape-1129.jpg
+    alt: "Nightscape 1129"
+  - filename: surfacescape-880.jpg
+    alt: "Surfacescape 880"
+  - filename: surfacescape-899.jpg
+    alt: "Surfacescape 899"
+  - filename: surfacescape-1151.jpg
+    alt: "Surfacescape 1151"
+  - filename: surfacescape-1869.jpg
+    alt: "Surfacescape 1869"
+  - filename: surfacescape-1877.jpg
+    alt: "Surfacescape 1877"
+  - filename: surfacescape-1889.jpg
+    alt: "Surfacescape 1889"
+  - filename: surfacescape-afternoon-165.jpg
+    alt: "Surfacescape Afternoon 165"
+  - filename: surfacescape-afternoon-875.jpg
+    alt: "Surfacescape Afternoon 875"
+  - filename: surfacescape-afternoon-877.jpg
+    alt: "Surfacescape Afternoon 877"
+  - filename: surfacescape-afternoon-885.jpg
+    alt: "Surfacescape Afternoon 885"
+  - filename: surfacescape-afternoon-890.jpg
+    alt: "Surfacescape Afternoon 890"
+  - filename: surfacescape-afternoon-904.jpg
+    alt: "Surfacescape Afternoon 904"
+  - filename: surfacescape-afternoon-1922.jpg
+    alt: "Surfacescape Afternoon 1922"
+  - filename: surfacescape-afternoon-1930.jpg
+    alt: "Surfacescape Afternoon 1930"
+---
+.row
+  .small-12
+    .ad-gallery#gallery
+      .ad-image-wrapper
+      / .ad-controls
+      #descriptions
+      .ad-nav
+        .ad-thumbs
+          %ul.ad-thumb-list
+            - current_page.data.images.each_with_index do |image, index|
+              %li
+                %a{href: "/images/#{current_page.data.gallery_path}/#{image.filename}"}
+                  %img{src: "/images/thumbs/#{current_page.data.gallery_path}/#{image.filename}", class: "image#{index}", alt: "#{current_page.data.gallery_name} : #{image.alt}"}
