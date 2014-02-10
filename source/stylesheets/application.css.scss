@@ -77,15 +77,22 @@
   left: 10%;
 }
 
-.index .image-container > img {
-//  float: right;
-}
-
 .about .info-container {
   display: table;
 }
 
 .about .info-container .info-inner {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.info .info-container {
+  display: table;
+}
+
+.info .info-container .info-inner {
   display: table-cell;
   vertical-align: middle;
   width: 100%;
