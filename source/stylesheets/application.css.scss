@@ -22,7 +22,7 @@
 // @import "foundation/components/magellan";
 // @import "foundation/components/orbit";
 //@import "foundation/components/pagination";
-//@import "foundation/components/panels";
+@import "foundation/components/panels";
 // @import "foundation/components/pricing-tables";
 // @import "foundation/components/progress-bars";
 // @import "foundation/components/reveal";
@@ -62,11 +62,32 @@
   padding-bottom: 20px;
 }
 
-.about-copy {
+.info-container {
   display: inline-block;
-  
 }
 
-.about-copy > span {
-  vertical-align:middle;
+.index .info-container {
+  color: #7c7061;
+  background-color: #bab2a5;
+}
+
+.index .info-container > p {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+}
+
+.index .image-container > img {
+//  float: right;
+}
+
+.about .info-container {
+  display: table;
+}
+
+.about .info-container .info-inner {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  margin: 0 auto;
 }
