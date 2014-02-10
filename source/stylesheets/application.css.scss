@@ -98,3 +98,14 @@
   width: 100%;
   margin: 0 auto;
 }
+
+.contact .info-container {
+  display: table;
+}
+
+.contact .info-container .info-inner {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  margin: 0 auto;
+}
