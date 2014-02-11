@@ -2,6 +2,7 @@
 @import "settings";
 
 @import "../../components/normalize-scss/_normalize.scss";
+@import "jquery.fancybox";
 
 // @import "foundation/components/accordion";
 // @import "foundation/components/alert-boxes";
@@ -71,7 +72,7 @@
   background-color: #bab2a5;
 }
 
-.index .info-container > p {
+.index .info-container p {
   position: absolute;
   bottom: 10%;
   left: 10%;

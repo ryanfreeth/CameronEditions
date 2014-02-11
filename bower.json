@@ -4,6 +4,7 @@
   "private": "true",
   "dependencies": {
     "normalize-scss": "~2.1",
-    "foundation": "zurb/bower-foundation"
+    "foundation": "zurb/bower-foundation",
+    "fancybox": "~2.1.5"
   }
 }
