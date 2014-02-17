@@ -57,11 +57,20 @@ images:
       .ad-image-wrapper
       / .ad-controls
       #descriptions
+        %p{style: "float: left;"}
+          ="#{current_page.data.gallery_name}"
+        %p{style: "float: right;"}
+          %a#info{href:"#gallery-info"}
+            artist statement
       .ad-nav
         .ad-thumbs
           %ul.ad-thumb-list
             - current_page.data.images.each_with_index do |image, index|
               %li
                 %a{href: "/images/#{current_page.data.gallery_path}/#{image.filename}"}
-                  %img{src: "/images/thumbs/#{current_page.data.gallery_path}/#{image.filename}", class: "image#{index}", alt: "#{current_page.data.gallery_name} : #{image.alt}"}
+                  %img{src: "/images/thumbs/#{current_page.data.gallery_path}/#{image.filename}", class: "image#{index}", alt: "#{image.alt}"}
+                  
+.gallery-info-container{style: "display:none;"}
+  #gallery-info
+    =lorem.paragraph
   

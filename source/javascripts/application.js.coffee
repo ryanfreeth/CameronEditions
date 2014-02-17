@@ -31,6 +31,10 @@
 
 $(document).foundation()
 
+$(document).ready ->
+  $("a#info").fancybox hideOnContentClick: true
+  return
+
 galleries = $(".ad-gallery").adGallery(
   start_at_index: 0
   update_window_hash: false
