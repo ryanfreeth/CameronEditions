@@ -32,7 +32,12 @@
 $(document).foundation()
 
 $(document).ready ->
-  $("a#info").fancybox hideOnContentClick: true
+  $("a#info").fancybox 
+    hideOnContentClick: true
+    autoSize: false
+    width: 500
+    height: 200
+    leftRatio: .70
   return
 
 galleries = $(".ad-gallery").adGallery(
