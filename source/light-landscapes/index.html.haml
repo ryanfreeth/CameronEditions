@@ -57,10 +57,10 @@ images:
       .ad-image-wrapper
       / .ad-controls
       #descriptions
-        %p{style: "float: left;"}
+        %p.gallery-label
           ="#{current_page.data.gallery_name}"
-        %p{style: "float: right;"}
-          %a#info{href:"#gallery-info"}
+        %p.statement-label
+          %a{id: "statement-anchor", href:"#statement"}
             artist statement
       .ad-nav
         .ad-thumbs
@@ -70,7 +70,11 @@ images:
                 %a{href: "/images/#{current_page.data.gallery_path}/#{image.filename}"}
                   %img{src: "/images/thumbs/#{current_page.data.gallery_path}/#{image.filename}", class: "image#{index}", alt: "#{image.alt}"}
     
-.gallery-info-container{style: "display:none;"}
-  #gallery-info
-    =lorem.paragraph
+.statement-container
+  #statement
+    %p 
+      These natural, non-manipulated works explore a collection of reflective, textural surfaces found in a lively urban environment.  The photographic macro views emulate a cosmic landscape with bold electrical effects and cloud formations; in actual fact, the saturated color and composition are from nearby traffic lights and neon signs in storefront windows reflected from an uneven metallic surface.
+    %p
+      Building this collection of works over several nights and locations allowed Angela to utilize several different angles and light variations to achieve a stunning body of work that explores the unseen landscapes and details that exist in our world, unobserved by the naked eye.
+      
   

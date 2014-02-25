@@ -32,11 +32,9 @@
 $(document).foundation()
 
 $(document).ready ->
-  $("a#info").fancybox 
+  $("a#statement-anchor").fancybox 
     hideOnContentClick: true
-    autoSize: false
-    width: 500
-    height: 200
+    autoSize: true
     leftRatio: .70
   return
 
