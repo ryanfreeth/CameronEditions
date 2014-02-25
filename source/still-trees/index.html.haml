@@ -23,10 +23,20 @@ images:
       .ad-image-wrapper
       / .ad-controls
       #descriptions
+        %p.gallery-label
+          ="#{current_page.data.gallery_name}"
+        %p.statement-label
+          %a{id: "statement-anchor", href:"#statement"}
+            artist statement
       .ad-nav
         .ad-thumbs
           %ul.ad-thumb-list
             - current_page.data.images.each_with_index do |image, index|
               %li
                 %a{href: "/images/#{current_page.data.gallery_path}/#{image.filename}"}
-                  %img{src: "/images/thumbs/#{current_page.data.gallery_path}/#{image.filename}", class: "image#{index}", alt: "#{current_page.data.gallery_name} : #{image.alt}"}
+                  %img{src: "/images/thumbs/#{current_page.data.gallery_path}/#{image.filename}", class: "image#{index}", alt: "#{image.alt}"}
+    
+.statement-container
+  #statement
+    %p 
+      Absence of directional lighting allows us to appreciate the simple graphic composition of this body of works, using Cameron’s signature photographic style. Utilizing controlled camera motion, the trees are simplified with timeless texture and emotion through natural hues and a painterly feel. These beautiful Still Trees are some of Cameron’s most sought after Limited Edition works.

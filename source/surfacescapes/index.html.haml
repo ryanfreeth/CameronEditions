@@ -4,40 +4,40 @@ body_class: gallery
 gallery_name: "Surfacescapes"
 gallery_path: "surfacescapes"
 images:
-  - filename: nightscape-1123.jpg
-    alt: "Nightscape 1123"
-  - filename: nightscape-1128.jpg
-    alt: "Nightscape 1128"
-  - filename: nightscape-1129.jpg
-    alt: "Nightscape 1129"
-  - filename: surfacescape-880.jpg
-    alt: "Surfacescape 880"
-  - filename: surfacescape-899.jpg
-    alt: "Surfacescape 899"
-  - filename: surfacescape-1151.jpg
-    alt: "Surfacescape 1151"
-  - filename: surfacescape-1869.jpg
-    alt: "Surfacescape 1869"
-  - filename: surfacescape-1877.jpg
-    alt: "Surfacescape 1877"
-  - filename: surfacescape-1889.jpg
-    alt: "Surfacescape 1889"
-  - filename: surfacescape-afternoon-165.jpg
-    alt: "Surfacescape Afternoon 165"
-  - filename: surfacescape-afternoon-875.jpg
-    alt: "Surfacescape Afternoon 875"
-  - filename: surfacescape-afternoon-877.jpg
-    alt: "Surfacescape Afternoon 877"
-  - filename: surfacescape-afternoon-885.jpg
-    alt: "Surfacescape Afternoon 885"
-  - filename: surfacescape-afternoon-890.jpg
-    alt: "Surfacescape Afternoon 890"
-  - filename: surfacescape-afternoon-904.jpg
-    alt: "Surfacescape Afternoon 904"
-  - filename: surfacescape-afternoon-1922.jpg
-    alt: "Surfacescape Afternoon 1922"
-  - filename: surfacescape-afternoon-1930.jpg
-    alt: "Surfacescape Afternoon 1930"
+  - filename: ocean-lines-165.jpg
+    alt: "Ocean Lines 165"
+  - filename: ocean-lines-869.jpg
+    alt: "Ocean Lines 869"
+  - filename: ocean-lines-877.jpg
+    alt: "Ocean Lines 877"
+  - filename: ocean-lines-904.jpg
+    alt: "Ocean Lines 904"
+  - filename: ocean-lines-922.jpg
+    alt: "Ocean Lines 922"
+  - filename: ocean-lines-930.jpg
+    alt: "Ocean Lines 930"
+  - filename: ocean-nightscape-23.jpg
+    alt: "Ocean Nightscape 23"
+  - filename: ocean-nightscape-28.jpg
+    alt: "Ocean Nighscape 28"
+  - filename: ocean-nightscape-29.jpg
+    alt: "Ocean Nightscape 29"
+  - filename: seascape-afternoon-51.jpg
+    alt: "Seascape Afternoon 51"
+  - filename: seascape-afternoon-80.jpg
+    alt: "Seascape Afternoon 80"
+  - filename: seascape-afternoon-89.jpg
+    alt: "Seascape Afternoon 89"
+  - filename: seascape-afternoon-99.jpg
+    alt: "Seascape Afternoon 99"
+  - filename: tidal-875.jpg
+    alt: "Tidal 875"
+  - filename: tidal-877.jpg
+    alt: "Tidal 877"
+  - filename: tidal-885.jpg
+    alt: "Tidal 885"
+  - filename: tidal-890.jpg
+    alt: "Tidal 890"
 ---
 .row
   .small-12
@@ -45,10 +45,20 @@ images:
       .ad-image-wrapper
       / .ad-controls
       #descriptions
+        %p.gallery-label
+          ="#{current_page.data.gallery_name}"
+        %p.statement-label
+          %a{id: "statement-anchor", href:"#statement"}
+            artist statement
       .ad-nav
         .ad-thumbs
           %ul.ad-thumb-list
             - current_page.data.images.each_with_index do |image, index|
               %li
                 %a{href: "/images/#{current_page.data.gallery_path}/#{image.filename}"}
-                  %img{src: "/images/thumbs/#{current_page.data.gallery_path}/#{image.filename}", class: "image#{index}", alt: "#{current_page.data.gallery_name} : #{image.alt}"}
+                  %img{src: "/images/thumbs/#{current_page.data.gallery_path}/#{image.filename}", class: "image#{index}", alt: "#{image.alt}"}
+    
+.statement-container
+  #statement
+    %p 
+      Inconspicuous beautiful landscapes are the focus of this body of work using macro close-ups and Cameron’s unique perspective of angles and natural light. These unaltered Surface Scapes mimic a sense of warm summer storms rolling over the ocean with layers of glowing color and drama in the sky.  Completely unaltered and created on location, these works explore a world that is not apparent to passers by.

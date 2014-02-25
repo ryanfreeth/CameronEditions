@@ -1,0 +1,42 @@
+---
+title: Cameron Editions
+body_class: gallery
+gallery_name: "Abstracted Nature"
+gallery_path: "abstracted-nature"
+images:
+  - filename: botanical.jpg
+    alt: "Abstract Botanical"
+  - filename: dormant-garden.jpg
+    alt: "Dormant Garden"
+  - filename: gold-trees-red-grass.jpg
+    alt: "Gold Trees and Red Grass"
+  - filename: visceral-orchid.jpg
+    alt: "Visceral Orchid"
+  - filename: windswept-garden.jpg
+    alt: "Windswept Garden"
+---
+.row
+  .small-12
+    .ad-gallery#gallery
+      .ad-image-wrapper
+      / .ad-controls
+      #descriptions
+        %p.gallery-label
+          ="#{current_page.data.gallery_name}"
+        %p.statement-label
+          %a{id: "statement-anchor", href:"#statement"}
+            artist statement
+      .ad-nav
+        .ad-thumbs
+          %ul.ad-thumb-list
+            - current_page.data.images.each_with_index do |image, index|
+              %li
+                %a{href: "/images/#{current_page.data.gallery_path}/#{image.filename}"}
+                  %img{src: "/images/thumbs/#{current_page.data.gallery_path}/#{image.filename}", class: "image#{index}", alt: "#{image.alt}"}
+    
+.statement-container
+  #statement
+    %p 
+      Emotionally capturing ordinary subject matter and turning it into extraordinary imagery through the creative use of light, color and keen observation is what Angela Cameron produces with each new body of work. Her photographic talents explore controlled movement and macro angles to achieve a painterly view of our world.
+    %p
+      All works are created on location, without computer alteration. Cameron’s philosophy and approach is to create works that emulate a painting that evokes emotion, therefore heightening a personal connection between nature and modern abstraction.
