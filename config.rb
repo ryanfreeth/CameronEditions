@@ -97,3 +97,20 @@ configure :build do
   # Or use a different image path
   # set :http_path, "/Content/images/"
 end
+
+activate :s3_sync do |s3_sync|
+  s3_sync.bucket                = aws_config['s3_bucket']
+  s3_sync.region                = aws_config['aws_region']
+  s3_sync.aws_access_key_id     = aws_config['access_key_id']
+  s3_sync.aws_secret_access_key = aws_config['secret_access_key']
+  s3_sync.delete                = true
+  s3_sync.after_build           = true
+end
+
+activate :cloudfront do |cf|
+  cf.access_key_id              = aws_config['access_key_id']
+  cf.secret_access_key          = aws_config['secret_access_key']
+  cf.distribution_id            = aws_config['cloud_front_dist_id']
+  # cf.filter                     = /(.html|.xml)/
+  cf.after_build                = true
+end

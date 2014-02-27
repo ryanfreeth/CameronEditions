@@ -14,3 +14,6 @@ gem "closure-compiler"
 
 # for deploying to rackspace cloud
 gem "middleman-deploy"
+
+gem "middleman-s3_sync"
+gem "middleman-cloudfront"

@@ -21,3 +21,6 @@
 
 # Design docs
 /design
+
+# AWS config
+aws.yml
