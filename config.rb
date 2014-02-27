@@ -98,6 +98,8 @@ configure :build do
   # set :http_path, "/Content/images/"
 end
 
+aws_config = YAML::load(File.open('aws.yml'))
+
 activate :s3_sync do |s3_sync|
   s3_sync.bucket                = aws_config['s3_bucket']
   s3_sync.region                = aws_config['aws_region']
